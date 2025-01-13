@@ -1,0 +1,49 @@
+$${
+log(" ");
+
+toggle(@vida);
+if(!@vida);
+	setlabel("vida","");
+	log("&f&l[&2&lMA&f&lC&4&lRO&f&l] &aVida &fna tela: &cOFF&4!");
+	stop("VIDA");
+	stop;
+endif;
+log("&f&l[&2&lMA&f&lC&4&lRO&f&l] &aVida &fna tela: &aON&2!");
+
+// Cores para cada vida (valor da vida entre parênteses);
+set(&cores[0],"0");
+set(&cores[1],"4");
+set(&cores[2],"4");
+set(&cores[3],"4");
+set(&cores[4],"c");
+set(&cores[5],"c");
+set(&cores[6],"c");
+set(&cores[7],"c");
+set(&cores[8],"c");
+set(&cores[9],"c");
+set(&cores[10],"6");
+set(&cores[11],"6");
+set(&cores[12],"e");
+set(&cores[13],"e");
+set(&cores[14],"e");
+set(&cores[15],"e");
+set(&cores[16],"e");
+set(&cores[17],"e");
+set(&cores[18],"e");
+set(&cores[19],"e");
+set(&cores[20],"f");
+
+// Texto antes do valor da vida;
+set(&antes,"&b>>>>");
+
+// Estilo do valor da vida;
+set(&estilo,"&o&l");
+
+// Texto após o valor da vida;
+set(&depois,"&b<<<<");
+
+
+do();
+	setlabel("vida","%&antes%&%&cores[%HEALTH%]%%&estilo%%HEALTH%%&depois%");
+loop;
+}$$

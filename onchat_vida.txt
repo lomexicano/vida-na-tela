@@ -1,0 +1,7 @@
+$${
+ifmatches("%CHATCLEAN%","^. Agora voc. est. logado");
+	stop("VIDA");
+	unset(@vida);
+	exec("vida.txt","VIDA");
+endif;
+}$$
